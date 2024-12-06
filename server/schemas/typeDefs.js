@@ -1,52 +1,52 @@
 const typeDefs = `
-  type Author {
+  type User {
     id: Int!
-    firstName: String
-    lastName: String
-    posts: [Post]
+    username: String
+    email: String
+    foodDonations: [FoodDonation]
   }
 
-  type Post {
+  type FoodDonation {
     id: Int!
-    title: String
-    authorId: ID!
-    votes: Int
+    userId: ID!
+    foodType: String
+    quantity: Int
   }
 
-  input PostData {
+  input FoodDonationData {
     id: Int!
-    title: String
-    authorId: ID!
-    votes: Int
+    userId: ID!
+    foodType: String
+    quantity: Int
   }
 
-  input AuthorData {
+  input UserData {
     id: Int!
-    firstName: String
-    lastName: String
-    posts: [PostData]
+    username: String
+    email: String
+    foodDonations: [FoodDonationData]
   }
 
-  type postResponse {
+  type foodDonationResponse {
     success: Boolean
-    post: Post
+    foodDonation: FoodDonation
   }
 
-  type authorResponse {
+  type userResponse {
     success: Boolean
-    author: Author
+    user: User
   }
 
   type Query {
-    posts: [Post]
-    authors: [Author]
-    author(id: Int!): Author
-    post(id: Int!): Post
+    foodDonations: [FoodDonation]
+    users: [User]
+    user(id: Int!): User
+    foodDonation(id: Int!): FoodDonation
   }
 
   type Mutation {
-    createPost(post: PostData): postResponse
-    createAuthor(author: AuthorData): authorResponse
+    createFoodDonation(foodDonation: FoodDonationData): foodDonationResponse
+    createUser(user: UserData): userResponse
   }
 `;
 
