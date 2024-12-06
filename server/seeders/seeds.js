@@ -1,3 +1,3 @@
 const db = require('../config/connection');
-const {  } = require('../models');
+const { User } = require('../models');
 const cleanDB = require('./cleanDB');
