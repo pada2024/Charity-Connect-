@@ -1,47 +1,35 @@
-const authors = [
-  { id: 1, firstName: 'John', lastName: 'Smith' },
-  { id: 2, firstName: 'Xander', lastName: 'R' },
-  { id: 3, firstName: 'Grace', lastName: 'C' },
-];
-
-const posts = [
-  { id: 1, authorId: 1, title: 'Introduction to GraphQL', votes: 15 },
-  { id: 2, authorId: 2, title: 'Intro to Apollo', votes: 12 },
-  { id: 3, authorId: 2, title: 'TypeDefs', votes: 10 },
-  { id: 4, authorId: 3, title: 'MERN', votes: 3 },
+const users = [
+  { id: 1, username: 'johnsmith', email: 'john.smith@example.com', password: 'password123' },
+  { id: 2, username: 'xanderr', email: 'xander.r@example.com', password: 'password456' },
+  { id: 3, username: 'gracec', email: 'grace.c@example.com', password: 'password789' },
 ];
 
 module.exports = {
   Query: {
-    posts: () => posts,
-    authors: () => authors,
-    author: (parent, args) => {
-      return authors.find((author) => author.id === args.id);
-    },
-    post: (parent, args) => {
-      return posts.find((post) => post.id === args.id);
+    users: () => users,
+    user: (parent, args) => {
+      return users.find((user) => user.id === args.id);
     },
   },
 
   Mutation: {
-    createPost: (parent, newPost) => {
-      console.log('newPost id', newPost.post.id);
-      posts.push(newPost.post);
-      const result = {
-        success: true,
-        post: newPost.post,
-      };
-      return result;
-    },
-    createAuthor: (parent, newAuthor) => {
-      console.log('newAuthor', newAuthor);
+    createUser: (parent, newUser) => {
+      console.log('newUser', newUser);
 
-      authors.push(newAuthor.author);
+      // Create a new user object with username, email, and password
+      const userWithDetails = {
+        id: users.length + 1, // Assign a new ID
+        username: newUser.user.username,
+        email: newUser.user.email,
+        password: newUser.user.password, // Note: In a real application, you should hash the password
+      };
+
+      users.push(userWithDetails);
       const result = {
         success: true,
-        author: newAuthor.author,
+        user: userWithDetails,
       };
-      console.log(newAuthor.author);
+      console.log(userWithDetails);
       return result;
     },
   },
