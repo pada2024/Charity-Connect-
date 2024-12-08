@@ -1,4 +1,5 @@
 import './App.css';
+import Login from './components/Login';
 import Nav from './components/NavTabs';
 import { Outlet } from 'react-router-dom';
 import React, { useState } from 'react'; 
