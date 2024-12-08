@@ -12,3 +12,17 @@
   width: 100%; /* make images responsive */
   height: auto; /* maintain aspect ratio */
 }
+
+.donate-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.donate-button:hover {
+  background-color: #45a049; /* Darker green */
+}
