@@ -24,7 +24,7 @@ function App() {
       <Footer />
       <SocialLinks />
       <p>Charity Connect</p>
-      <p>Copyright &copy; {new Date().getFullYear()} Parisa React Portfolio</p>
+      <p>Copyright &copy; {new Date().getFullYear()} Charity Connect</p>
 
       {/* Render the Food Donation Modal */}
       <FoodDonationModal isOpen={isModalOpen} onRequestClose={closeModal} />

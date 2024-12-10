@@ -37,7 +37,13 @@ const typeDefs = `
     user: User
   }
 
+  type Auth {
+        token: String
+        user: User
+    }
+
   type Query {
+    getSingleUser: User
     foodDonations: [FoodDonation]
     users: [User]
     user(id: Int!): User
@@ -45,8 +51,10 @@ const typeDefs = `
   }
 
   type Mutation {
+    createUser(username: String, email: String, password: String): Auth
+    login(username: String, email: String, password: String): Auth
+    saveDonation(typeOfFood: string, quantity: String, orders: [Order]): User 
     createFoodDonation(foodDonation: FoodDonationData): foodDonationResponse
-    createUser(user: UserData): userResponse
   }
 `;
 
