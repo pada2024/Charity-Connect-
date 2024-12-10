@@ -53,7 +53,7 @@ const typeDefs = `
   type Mutation {
     createUser(username: String, email: String, password: String): Auth
     login(username: String, email: String, password: String): Auth
-    saveDonation(typeOfFood: string, quantity: String, orders: [Order]): User 
+    saveDonation(typeOfFood: String, quantity: String): User 
     createFoodDonation(foodDonation: FoodDonationData): foodDonationResponse
   }
 `;
