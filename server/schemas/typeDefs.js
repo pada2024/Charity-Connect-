@@ -51,9 +51,9 @@ const typeDefs = `
   }
 
   type Mutation {
-    createUser(username: String, email: String, password: String): Auth
+    createUser(username: String!, email: String!, password: String!): Auth
     login(username: String, email: String, password: String): Auth
-    saveDonation(typeOfFood: String, quantity: String): User 
+    createDonation(typeOfFood: String, quantity: Int): User 
     createFoodDonation(foodDonation: FoodDonationData): foodDonationResponse
   }
 `;
