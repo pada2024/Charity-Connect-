@@ -1,15 +1,18 @@
 [
     {
-      "firstName": "Mike",
-      "lastName": "Smith",
-      "email": "mikesmith@email.com",
+      "userName": "mikeapplesmith",
+      "email": "mikesmith@yahoo.com",
       "password": "password1000"
     },
     {
-
+      "userName": "messyjessie",
+      "email": "jessiejames@hotmail.com",
+      "password": "anotherpassword"
     },
     {
-
+      "userName": "thebig5",
+      "email": "kcbig5@gmail.com",
+      "password": "the3rdkey"
     }
   ]
   
