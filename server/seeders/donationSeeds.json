@@ -1,0 +1,14 @@
+[
+    {
+        "typeOfFood": "apples",
+        "quantity": "10"
+    },
+    {
+        "typeOfFood": "eggs",
+        "quantity": "12"
+    },
+    {
+        "typeOfFood": "potatoes",
+        "quantity": "2 bags"
+    }
+]
