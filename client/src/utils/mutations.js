@@ -1,7 +1,7 @@
 import { gpl } from '@apollo/client';
 
 export const CREATE_USER = gpl`
-    mutation createUser($username: String!, email: String!, passowrd: String!) {
+    mutation createUser($username: String!, email: String!, password: String!) {
         createUser(username: $username, email: $email, password: $password) {
             _id
             username
@@ -11,12 +11,11 @@ export const CREATE_USER = gpl`
     }
 `;
 
-export const CREATE_CHARITY = gpl ``
-
 export const CREATE_DONATION = gpl`
     mutation createDonation($typeofFood: String!, $quantity: Int!) {
         createDonation(typeofFood: $typeofFood, quantity: $quantity) {
             _id
+            userId
             Food
             Quantity
         }
