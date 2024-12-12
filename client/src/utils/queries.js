@@ -1,8 +1,8 @@
 import { gpl } from '@apollo/client';
 
 export const QUERY_USER = gpl`
-    query createUser {
-        createUser {
+    query User {
+        User {
             _id
             userName
             email
@@ -11,12 +11,11 @@ export const QUERY_USER = gpl`
     }
 `;
 
-//make a query for creating new charity?
-
 export const QUERY_DONATION = gpl`
-    query makeDonation ($_id: String) {
+    query Donation ($_id: String) {
         Donation(_id: $_id) {
             _id
+            userId
             typeOfFood
             quantity
         }

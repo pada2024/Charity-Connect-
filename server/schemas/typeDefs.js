@@ -43,11 +43,8 @@ const typeDefs = `
     }
 
   type Query {
-    getSingleUser: User
-    foodDonations: [FoodDonation]
     users: [User]
-    user(id: Int!): User
-    foodDonation(id: Int!): FoodDonation
+    foodDonations: [FoodDonation]
   }
 
   type Mutation {
