@@ -3,9 +3,9 @@ import { Link, useLocation } from 'react-router-dom';
 function NavTabs() {
   const currentPage = useLocation().pathname;
 
-  return (<div class="d-flex justify-content-between align-items-center">
+  return (<div className="d-flex justify-content-between align-items-center">
     <h1>Charity Connect</h1>
-    <ul class="nav nav-tabs">
+    <ul className="nav nav-tabs">
         <li className="nav-item">
         <Link
           to="/Home"
