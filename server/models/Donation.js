@@ -14,7 +14,7 @@ const donationSchema = new Schema({
       trim: true
     },
   
-    orders: [Order.schema]
+    // orders: [Order.schema]
   });
 
   const Donation = mongoose.model('Donation', donationSchema);
