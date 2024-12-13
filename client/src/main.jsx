@@ -3,6 +3,8 @@ import App from './App.jsx'
 import './index.css'
 import Home from './components/Home.jsx';
 import Food from './components/Food.jsx';
+import Signup from './components/Signup.jsx';
+import Login from './components/Login.jsx';
 import Donations from './components/Donations.jsx';
 import Contact from './components/Contact.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -22,7 +24,14 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-     
+      {
+        path: '/Signup',
+        element: <Signup />,
+      },
+      {
+        path: '/Login',
+        element: <Login />,
+      },
       {
         path: '/Food',
         element: <Food />,
