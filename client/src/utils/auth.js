@@ -1,3 +1,8 @@
+const Auth = {
+  login: (token) => { /* ... */ },
+  logout: () => { /* ... */ },
+};
+
 const jwt = require('jsonwebtoken');
 
 // Set token secret and expiration date
@@ -33,6 +38,8 @@ module.exports = {
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },
 };
+
+export default Auth;
 
 // const jwt = require('jsonwebtoken');
 
