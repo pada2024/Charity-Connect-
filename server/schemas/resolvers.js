@@ -1,4 +1,5 @@
 const { Charity, Donation, User } = require('../models');
+const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
   Query: {
@@ -21,6 +22,4 @@ const resolvers = {
       const Donation = await Charity.create(_id, Food, Quantity);
       return Donation;
     },
-  },
-};
 
