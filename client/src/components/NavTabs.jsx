@@ -24,6 +24,14 @@ function NavTabs() {
       </li>
       <li className="nav-item">
         <Link
+          to="/Login"
+          className={currentPage === '/Login' ? 'nav-link active' : 'nav-link'}
+        >
+          Login
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link
           to="/Food"
           className={currentPage === '/Food' ? 'nav-link active' : 'nav-link'}
         >
