@@ -22,12 +22,4 @@ const resolvers = {
       const Donation = await Charity.create(_id, Food, Quantity);
       return Donation;
     },
-    login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
 
-      if (!user) {
-        throw AuthenticationError;
-      }
-    },
-  }
-};
