@@ -3,7 +3,6 @@ const typeDefs = `
     id: Int!
     username: String
     email: String
-    foodDonations: [FoodDonation]
   }
 
   type FoodDonation {
@@ -44,7 +43,7 @@ const typeDefs = `
 
   type Query {
     users: [User]
-    foodDonations: [FoodDonation]
+    donations: [FoodDonation]
   }
 
   type Mutation {
