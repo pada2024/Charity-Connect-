@@ -31,12 +31,14 @@
 
 .home-section {
   margin: 5rem 0;
+  
 }
 
 .hero {
   position: relative;
   text-align: center;
   color: white;
+  
 }
 
 .hero-image {
@@ -53,6 +55,7 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   max-width: 600px; /* Limit the width for better readability */
   margin: auto;
+  
 }
 
 .cta-button {
@@ -66,4 +69,8 @@
 
 .cta-button:hover {
   background-color: #d32f2f;
+}
+
+#background {
+  background-color: lightblue;
 }
